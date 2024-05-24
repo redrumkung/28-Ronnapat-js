@@ -223,6 +223,7 @@ document.addEventListener("DOMContentLoaded", () => {
     for (const product of cart) {
       if(!Number.isInteger(product.amount) || product.amount <= 0) {
         alert("Invalid amount number")
+        return
       }
     }
     const totalPrice = cart.reduce(
