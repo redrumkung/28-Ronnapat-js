@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const cartList = document.getElementById("productCart");
     const totalPriceElement = document.getElementById("totalPrice");
     const totalPriceBtn = document.getElementById("sumPrice");
+    const showTotal = document.getElementById("showTotal");
   
     let products = [];
   
@@ -218,7 +219,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   
     totalPriceBtn.addEventListener("click", () => {
-      calculatePrice();
+      calculatePrice(),
+      showTotal.classList.remove("hidden")
     });
   
     function calculatePrice() {
