@@ -148,8 +148,13 @@ document.addEventListener("DOMContentLoaded", () => {
           renderCart(cart);
         }
       });
+
+      if (cart.length > 0) {
+        totalPriceBtn.classList.remove("hidden"); 
+      }
+
     });
-  
+
     function renderCart(cartToRender) {
       cartList.innerHTML = "";
       cartToRender.forEach((product) => {
