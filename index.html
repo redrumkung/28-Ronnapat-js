@@ -1,11 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="p-5">
+    <head>
+      <h1 class="flex flex-col text-center text-5xl font-bold">
+        Shopping Cart
+      </h1>
+      <h2 class="text-3xl font-bold">Add Item for selection</h2>
+    </head>
+    <section id="productDashBoard"class="">
+      <form id="form">
+        <h2>
+          Product Name:
+          <input
+            id="productName"
+            class="border-2 rounded border-black"
+            type="text"
+            placeholder="Product Name..."
+          />
+          Price:
+          <input
+            id="productPrice"
+            class="border-2 rounded border-black"
+            type="number"
+            placeholder="Price..."
+          />
+          Image:
+          <input
+            id="productImage"
+            class="border-2 rounded border-black"
+            type="url"
+            placeholder="Image..."
+          />
+          <button id="createProduct" class="border border-black px-1 rounded" type="submit">
+            Create Product
+          </button>
+        </h2>
+      </form>
+      <br />
+      <ul id="productDashboard" class="pt-5">
+    </ul>
+    </section>
+    <br />
+    <section id="productForm" class="">
+      <button
+        id="addToCart"
+        type="submit"
+        class="border border-black px-1 rounded"
+      >
+        Add to Cart
+      </button>
+      <ul id="productCart" class="pt-5 border">
+      </ul>
+        <button id="sumPrice" class="border border-black px-1 rounded">Calculate Final Price</button>
+      </div>
+      <h1 class="text-5xl">You have to Pay : <span id="totalPrice">$0.00</span></h1>
+    </section>
+    <script src="script.js"></script>
+  </body>   
 </html>
