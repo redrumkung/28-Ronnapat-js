@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const productPrice = productPriceInput.value.trim();
     const productImage = productImageInput.value.trim();
     if (productName && productPrice && productImage) {
-      if (!isNaN(productPrice)) {
+      if (productPrice > 0) {
         if (isValidImageUrl(productImage)) {
           const product = {
             id: Date.now(),
@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
       );
       if (newProductName && newProductPrice && newProductImage) {
         const priceNumber = parseFloat(newProductPrice);
-        if (!isNaN(priceNumber) && isValidImageUrl(newProductImage)) {
+        if (priceNumber > 0 && isValidImageUrl(newProductImage)) {
           product.productName = newProductName;
           product.price = priceNumber;
           product.image = newProductImage;
