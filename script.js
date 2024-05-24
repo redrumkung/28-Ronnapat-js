@@ -197,6 +197,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
       cartList.appendChild(productItem);
     });
+
+    if (cart.length === 0) {
+      totalPriceBtn.classList.add("hidden");
+      showTotal.classList.add("hidden");
+    }
+    
   }
   function removeProduct(id) {
     const product = cart.find((product) => product.id === id);
