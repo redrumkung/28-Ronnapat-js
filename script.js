@@ -96,7 +96,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function editProduct(id) {
     const product = products.find((product) => product.id === id);
-    console.log(product);
     if (product) {
       const newProductName = prompt(
         "Enter new product name:",
@@ -141,7 +140,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (product) {
         const existProduct = cart.find((el) => el.id === productId);
         if (existProduct) {
-          console.log(existProduct);
           product.amount += 1;
         } else {
           cart.push(product);
