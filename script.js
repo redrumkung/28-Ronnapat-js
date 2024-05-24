@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let products = [];
 
   createProductBtn.addEventListener("click", (event) => {
-    event.preventDefault(); // Prevent form submission
+    event.preventDefault(); 
 
     const productName = productNameInput.value.trim();
     const productPrice = productPriceInput.value.trim();
@@ -220,6 +220,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function calculatePrice() {
+    for (const product of cart) {
+      if(!Number.isInteger(product.amount) || product.amount <= 0) {
+        alert("Invalid amount number")
+      }
+    }
     const totalPrice = cart.reduce(
       (total, product) => total + product.price * product.amount,
       0
